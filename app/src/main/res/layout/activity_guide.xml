@@ -4,21 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".GuideActivity">
+    tools:context=".activity.GuideActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textColor="#2D3142"
+        android:textAlignment="center"
+        android:text="Welcome to\nNA:DO"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="400dp" />
 
-    <Button
-        android:id="@+id/test_Btn"
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        app:ci_drawable="@drawable/indicator"
+        app:ci_drawable_unselected="@drawable/indicator_unsel"
+        android:layout_height="48dp"/>
+
+    <LinearLayout
+        android:id="@+id/skip_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:background="@drawable/button_bg"
         android:layout_marginTop="60dp"
-        android:text="건너뛰기"/>
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:text="건너뛰기"/>
+
+    </LinearLayout>
+
 
 
 </LinearLayout>

@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NadoApplication">
-        <activity android:name=".GuideActivity"></activity>
+        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.GuideActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,8 +21,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

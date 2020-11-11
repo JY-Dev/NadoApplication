@@ -1,12 +1,12 @@
-package com.jydev.nadoapplication
+package com.jydev.nadoapplication.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.jydev.nadoapplication.R
 
-class GuideActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_guide)
-
+        setContentView(R.layout.activity_login)
     }
 }

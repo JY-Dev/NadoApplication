@@ -1,7 +1,8 @@
-package com.jydev.nadoapplication
+package com.jydev.nadoapplication.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.jydev.nadoapplication.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
