@@ -25,7 +25,7 @@
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#2d3142"
-        android:text="TITLE"/>
+        android:text="헬스케어링"/>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -6,9 +6,65 @@
         <item>체계적으로 관리받아 하루가 다르게\n성장하는 당신을 응원합니다</item>
     </string-array>
 
+    <string-array name="mainSubItemList">
+        <item>인바디 데이터</item>
+        <item>비만진단</item>
+        <item>근육/지방 조절</item>
+        <item>심박수/혈압</item>
+    </string-array>
+
+    <string-array name="masinSub01">
+        <item>체중</item>
+        <item>체지방량</item>
+        <item>골격근량</item>
+        <item>체수분</item>
+        <item>단백질</item>
+        <item>무기질</item>
+    </string-array>
+
+    <string-array name="masinSub02">
+        <item>BMI</item>
+        <item>체지방량</item>
+        <item>복부지방률</item>
+        <item>기초대사량</item>
+    </string-array>
+
+    <string-array name="masinSub03">
+        <item>지방</item>
+        <item>근육</item>
+        <item>체중</item>
+    </string-array>
+
+    <string-array name="masinSub04">
+        <item>심박수</item>
+        <item>수축기혈압</item>
+        <item>이완기혈압</item>
+    </string-array>
+
     <array name="guideListImg">
         <item>@drawable/guide01</item>
         <item>@drawable/guide02</item>
         <item>@drawable/guide03</item>
     </array>
+
+    <string-array name="subvaluetitle01">
+        <item>표준범위 62.7~76.7kg</item>
+        <item>표준범위 10.8~17.2kg</item>
+        <item>표준범위 20.3~24.9kg</item>
+        <item>표준범위 50~65%</item>
+        <item>표준범위 8.3~10.1kg</item>
+        <item>표준범위 2.86kg~3.5kg</item>
+    </string-array>
+
+    <string-array name="subvaluetitle02">
+        <item>표준범위 10.8 ~17.2kg</item>
+        <item></item>
+        <item></item>
+        <item>18~29세 표준 1550</item>
+    </string-array>
+    <string-array name="subvaluetitle03">
+        <item>안정범위 60~70bpm</item>
+        <item>정상 120mmHg이하</item>
+        <item>정상 80mmHg이하</item>
+    </string-array>
 </resources>

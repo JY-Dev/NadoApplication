@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.jydev.nadoapplication"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -43,6 +43,9 @@ dependencies {
 
     //인디케이터
     implementation 'me.relex:circleindicator:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

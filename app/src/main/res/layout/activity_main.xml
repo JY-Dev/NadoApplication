@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_view"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +9,17 @@
     android:background="#f4f6fa"
     tools:context=".activity.MainActivity">
 
-    <include layout="@layout/app_toolbar"/>
+    <include
+        android:id="@+id/app_toolbar"
+        layout="@layout/app_main_toolbar"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_toolbar"
+        android:layout_above="@+id/bottom_navigation"/>
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

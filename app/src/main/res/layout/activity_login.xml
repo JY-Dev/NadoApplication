@@ -12,7 +12,9 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/login_icon"/>
 
     <TextView
         android:layout_width="wrap_content"
