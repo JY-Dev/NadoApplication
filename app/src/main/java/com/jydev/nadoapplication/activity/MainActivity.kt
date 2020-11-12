@@ -12,6 +12,8 @@ import com.jydev.nadoapplication.R
 import com.jydev.nadoapplication.fragment.main.MainFragment01
 import com.jydev.nadoapplication.fragment.main.MainFragment02
 import com.jydev.nadoapplication.fragment.main.ReportFragment
+import com.jydev.nadoapplication.fragment.main.StartFragment
+import com.jydev.nadoapplication.util.FirstCheck.firstCheck
 import com.jydev.nadoapplication.util.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_main_toolbar.*
@@ -20,6 +22,7 @@ import kotlinx.android.synthetic.main.app_main_toolbar.*
 class MainActivity : AppCompatActivity() {
     private var fragmentList = mutableListOf<Fragment>()
     private val fragmentManager: FragmentManager = supportFragmentManager
+    private lateinit var firstFragment : Fragment
     private var fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
     private var mainFlag = true
     private var preMenuId = 0
@@ -32,7 +35,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun layoutInit() {
         main_btn.visibility = View.VISIBLE
-        fragmentList = mutableListOf(MainFragment01(),
+        firstFragment = if(firstCheck) StartFragment() else MainFragment01()
+        fragmentList = mutableListOf(firstFragment,
             MainFragment02(),
             ReportFragment()
         )
@@ -44,7 +48,8 @@ class MainActivity : AppCompatActivity() {
                     if (preMenuId == item.itemId) setAnimation()
                     toolbar_title.text = "헬스케어링"
                     main_btn.visibility = View.VISIBLE
-                    setFragment(if (mainFlag) MenuItem.MAIN01.ordinal else MenuItem.MAIN02.ordinal)
+                    if(!firstCheck)setFragment(if (mainFlag) MenuItem.MAIN01.ordinal else MenuItem.MAIN02.ordinal)
+                    else setFragment(MenuItem.MAIN01.ordinal)
                 }
                 R.id.report ->{
                     toolbar_title.text = "건강관리"
