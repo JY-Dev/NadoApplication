@@ -1,4 +1,4 @@
-package com.jydev.nadoapplication.fragment
+package com.jydev.nadoapplication.fragment.guide
 
 import android.content.Context
 import android.content.res.TypedArray

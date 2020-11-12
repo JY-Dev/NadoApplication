@@ -1,8 +1,7 @@
 package com.jydev.nadoapplication.activity
 
 import android.os.Bundle
-import android.transition.Slide
-import android.view.LayoutInflater
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -10,11 +9,12 @@ import androidx.fragment.app.FragmentTransaction
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.jydev.nadoapplication.R
-import com.jydev.nadoapplication.fragment.MainFragment01
-import com.jydev.nadoapplication.fragment.MainFragment02
-import com.jydev.nadoapplication.fragment.ReportFragment
+import com.jydev.nadoapplication.fragment.main.MainFragment01
+import com.jydev.nadoapplication.fragment.main.MainFragment02
+import com.jydev.nadoapplication.fragment.main.ReportFragment
 import com.jydev.nadoapplication.util.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.app_main_toolbar.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,20 +27,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         layoutInit()
+
     }
 
     private fun layoutInit() {
-        fragmentList = mutableListOf(MainFragment01(), MainFragment02(), ReportFragment())
+        main_btn.visibility = View.VISIBLE
+        fragmentList = mutableListOf(MainFragment01(),
+            MainFragment02(),
+            ReportFragment()
+        )
         setFragment(MenuItem.MAIN01.ordinal)
         preMenuId = R.id.home
         bottom_navigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.home -> {
                     if (preMenuId == item.itemId) setAnimation()
+                    toolbar_title.text = "헬스케어링"
+                    main_btn.visibility = View.VISIBLE
                     setFragment(if (mainFlag) MenuItem.MAIN01.ordinal else MenuItem.MAIN02.ordinal)
                 }
-                R.id.report ->
+                R.id.report ->{
+                    toolbar_title.text = "건강관리"
+                    main_btn.visibility = View.GONE
                     setFragment(MenuItem.REPORT.ordinal)
+                }
+
             }
             preMenuId = item.itemId
             true

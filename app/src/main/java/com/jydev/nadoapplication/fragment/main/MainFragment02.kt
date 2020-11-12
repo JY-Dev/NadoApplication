@@ -1,4 +1,4 @@
-package com.jydev.nadoapplication.fragment
+package com.jydev.nadoapplication.fragment.main
 
 import android.graphics.Color
 import android.os.Bundle
@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.customview.widget.ViewDragHelper
 import com.jydev.nadoapplication.R
 import kotlinx.android.synthetic.main.sub_bottom_item.view.*
 import kotlinx.android.synthetic.main.sub_title_item.view.*

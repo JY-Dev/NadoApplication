@@ -3,12 +3,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.ReportFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.main.ReportFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="test" />
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="12dp"
+            android:text="강민정"
+            android:textColor="@color/text_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#9c9eb9"
+            android:layout_marginBottom="24dp"
+            android:text="PT님께서 고객님을 위해 등록하였습니다"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioGroup
+                android:id="@+id/rd_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="62dp"
+                android:paddingEnd="62dp">
+
+                <RadioButton
+                    android:id="@+id/rec_meal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:textColor="@drawable/navigation_report_color"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:text="추천식단"/>
+
+                <RadioButton
+                    android:id="@+id/rec_exercise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/navigation_report_color"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:text="추천운동"/>
+
+                <RadioButton
+                    android:id="@+id/pt_sub"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/navigation_report_color"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:text="PT과제"/>
+
+
+
+            </RadioGroup>
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/rd_report"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
 
 </FrameLayout>

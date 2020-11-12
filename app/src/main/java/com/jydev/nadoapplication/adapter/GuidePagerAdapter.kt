@@ -3,7 +3,7 @@ package com.jydev.nadoapplication.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.jydev.nadoapplication.fragment.GuideFragment
+import com.jydev.nadoapplication.fragment.guide.GuideFragment
 
 class GuidePagerAdapter(fa : FragmentActivity) : FragmentStateAdapter(fa) {
 

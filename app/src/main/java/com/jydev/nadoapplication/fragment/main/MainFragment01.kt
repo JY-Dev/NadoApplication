@@ -1,4 +1,4 @@
-package com.jydev.nadoapplication.fragment
+package com.jydev.nadoapplication.fragment.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.jydev.nadoapplication.R
 
+class MainFragment01 : Fragment() {
 
-
-class ReportFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -19,7 +18,8 @@ class ReportFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_report, container, false)
+        val view = inflater.inflate(R.layout.fragment_main01, container, false)
+
         return view
     }
 
