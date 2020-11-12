@@ -14,14 +14,14 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/profile_img"/>
+            android:src="@drawable/profile_img02"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_marginBottom="12dp"
-            android:text="강민정"
+            android:text="강민국"
             android:textColor="@color/text_color"/>
 
         <TextView
