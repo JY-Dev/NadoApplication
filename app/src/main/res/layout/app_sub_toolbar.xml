@@ -32,7 +32,8 @@
         android:layout_marginEnd="20dp"
         android:layout_gravity="end"
         android:textSize="18sp"
-        android:textColor="#006EA1"
+        android:enabled="false"
+        android:textColor="@drawable/complete_btn_color"
         android:text="완료"
         android:layout_centerVertical="true"/>
 

@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import com.jydev.nadoapplication.R
 import com.jydev.nadoapplication.activity.FitnessSelActivity
 import com.jydev.nadoapplication.adapter.GridAdapter
+import com.jydev.nadoapplication.util.FirstCheck
 import kotlinx.android.synthetic.main.fragment_start.view.*
 import kotlinx.android.synthetic.main.start_main_sub_item.view.*
 
@@ -47,8 +48,4 @@ class StartFragment : Fragment() {
         subView.addView(view)
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        println("test="+resultCode)
-    }
 }

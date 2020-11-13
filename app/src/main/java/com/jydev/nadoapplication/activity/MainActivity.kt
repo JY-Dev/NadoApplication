@@ -1,5 +1,6 @@
 package com.jydev.nadoapplication.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ import com.jydev.nadoapplication.fragment.main.MainFragment01
 import com.jydev.nadoapplication.fragment.main.MainFragment02
 import com.jydev.nadoapplication.fragment.main.ReportFragment
 import com.jydev.nadoapplication.fragment.main.StartFragment
+import com.jydev.nadoapplication.util.FirstCheck
 import com.jydev.nadoapplication.util.FirstCheck.firstCheck
 import com.jydev.nadoapplication.util.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
@@ -64,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setFragment(position: Int) {
-        mainFlag = !mainFlag
+        if(!firstCheck)mainFlag = !mainFlag
         fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayout, fragmentList[position])
             .commitAllowingStateLoss()
@@ -76,5 +78,14 @@ class MainActivity : AppCompatActivity() {
             .playOn(main_view)
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode==5000){
+            firstCheck = false
+            layoutInit()
+        }
+
+
+    }
 
 }
