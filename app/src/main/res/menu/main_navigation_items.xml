@@ -14,8 +14,7 @@
         android:title=""
         android:enabled="false"
         android:icon="@drawable/chat"/>
-    <item android:id="@+id/community"
+    <item android:id="@+id/mypage"
         android:title=""
-        android:enabled="false"
         android:icon="@drawable/community"/>
 </menu>

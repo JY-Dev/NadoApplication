@@ -64,40 +64,52 @@
             android:textColor="@color/disable_text_color"/>
 
         <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:background="@drawable/button_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:gravity="center">
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="#ffffff"
-                android:text="문의하기"/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_bg"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:text="문의하기"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pre_btn"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_bg"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:text="이전 홈으로"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
+
+
     </LinearLayout>
 
 
-    <LinearLayout
-        android:id="@+id/pre_btn"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@drawable/button_bg"
-        android:layout_marginTop="40dp"
-        android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#ffffff"
-            android:text="다시생성"/>
-
-    </LinearLayout>
 
 
 </LinearLayout>
