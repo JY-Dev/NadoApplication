@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.jydev.nadoapplication.R
+import com.jydev.nadoapplication.callback.ClearFragmentCallback
 import com.jydev.nadoapplication.data.*
 import com.jydev.nadoapplication.fragment.main.MainFragment01
 import com.jydev.nadoapplication.fragment.main.MainFragment02
@@ -51,7 +52,12 @@ class MainActivity : AppCompatActivity() {
     private fun layoutInit() {
         main_btn.visibility = View.VISIBLE
         firstCheck = false
-        firstFragment = if(firstCheck) StartFragment() else MainFragment01()
+        firstFragment = if(firstCheck) StartFragment() else MainFragment01(object : ClearFragmentCallback{
+            override fun clearFragment() {
+             firstCheck = true
+                layoutInit()
+            }
+        })
         fragmentList = mutableListOf(firstFragment,
             MainFragment02(),
             ReportFragment()
