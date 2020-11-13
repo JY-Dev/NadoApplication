@@ -3,13 +3,16 @@ package com.jydev.nadoapplication.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.viewModels
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.jydev.nadoapplication.R
+import com.jydev.nadoapplication.data.*
 import com.jydev.nadoapplication.fragment.main.MainFragment01
 import com.jydev.nadoapplication.fragment.main.MainFragment02
 import com.jydev.nadoapplication.fragment.main.ReportFragment
@@ -17,6 +20,8 @@ import com.jydev.nadoapplication.fragment.main.StartFragment
 import com.jydev.nadoapplication.util.FirstCheck
 import com.jydev.nadoapplication.util.FirstCheck.firstCheck
 import com.jydev.nadoapplication.util.MenuItem
+import com.jydev.nadoapplication.util.ViewModelCase
+import com.jydev.nadoapplication.viewmodel.BodyDataViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_main_toolbar.*
 
@@ -28,15 +33,24 @@ class MainActivity : AppCompatActivity() {
     private var fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
     private var mainFlag = true
     private var preMenuId = 0
+    private val mockHeight = 173F
+    private val mockInBodyData = InBodyData(70.2F,13.5F,22.5F,57.5F,8.5F,3.2F)
+    private val mockFatData = FatData(22.5F,13.5F,0.83F,1725F)
+    private val mockMuscleFatControllData = MuscleFatControll(-3.7F,8.1F,-4.4F)
+    private val mockHrBp = HrBp(62F,112F,79F)
+    private val model: BodyDataViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        model.setBody(Body(mockHeight,mockInBodyData,mockFatData,mockMuscleFatControllData,mockHrBp))
+        ViewModelCase.model = model
         layoutInit()
-
     }
 
     private fun layoutInit() {
         main_btn.visibility = View.VISIBLE
+        firstCheck = false
         firstFragment = if(firstCheck) StartFragment() else MainFragment01()
         fragmentList = mutableListOf(firstFragment,
             MainFragment02(),
@@ -58,7 +72,6 @@ class MainActivity : AppCompatActivity() {
                     main_btn.visibility = View.GONE
                     setFragment(MenuItem.REPORT.ordinal)
                 }
-
             }
             preMenuId = item.itemId
             true

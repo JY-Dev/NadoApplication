@@ -43,6 +43,8 @@ dependencies {
 
     implementation 'com.chauthai.overscroll:overscroll-bouncy:0.1.0'
 
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
+
     //인디케이터
     implementation 'me.relex:circleindicator:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
