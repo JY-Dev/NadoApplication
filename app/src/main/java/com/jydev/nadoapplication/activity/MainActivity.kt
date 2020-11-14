@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     private var mainFlag = true
     private var preMenuId = 0
     private val mockHeight = 173F
+    private val age = 28F
     private val mockInBodyData = InBodyData(70.2F, 13.5F, 22.5F, 57.5F, 8.5F, 3.2F)
     private val mockFatData = FatData(22.5F, 13.5F, 0.83F, 1725F)
     private val mockMuscleFatControllData = MuscleFatControll(-3.7F, 8.1F, -4.4F)
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         model.setBody(
             Body(
+                age,
                 mockHeight,
                 mockInBodyData,
                 mockFatData,

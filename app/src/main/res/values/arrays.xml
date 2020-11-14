@@ -13,6 +13,12 @@
         <item>심박수/혈압</item>
     </string-array>
 
+    <string-array name="healthRegItemList">
+        <item>기본정보</item>
+        <item>인바디 데이터</item>
+        <item>비만/심박수/혈압 데이터</item>
+    </string-array>
+
     <string-array name="masinSub01">
         <item>체중</item>
         <item>체지방량</item>

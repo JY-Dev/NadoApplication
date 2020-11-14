@@ -1,6 +1,6 @@
 package com.jydev.nadoapplication.data
 
-data class Body(var height : Float , var inBodyData: InBodyData, var fatData: FatData,var muscleFatControll: MuscleFatControll,var hrBp: HrBp)
+data class Body(var age : Float,var height : Float , var inBodyData: InBodyData, var fatData: FatData,var muscleFatControll: MuscleFatControll,var hrBp: HrBp)
 
 data class InBodyData(var weight:Float,var fatMass : Float,var muscles : Float , var water : Float,var protein:Float,var mineral : Float)
 

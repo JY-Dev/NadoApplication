@@ -17,6 +17,9 @@ import com.jydev.nadoapplication.data.*
 import com.jydev.nadoapplication.util.ViewModelCase
 import com.jydev.nadoapplication.viewmodel.BodyDataViewModel
 import kotlinx.android.synthetic.main.fragment_main02.view.*
+import kotlinx.android.synthetic.main.fragment_main02.view.age_tv
+import kotlinx.android.synthetic.main.fragment_my_page.*
+import kotlinx.android.synthetic.main.fragment_my_page.view.*
 import kotlinx.android.synthetic.main.sub_bottom_item.view.*
 import kotlinx.android.synthetic.main.sub_title_item.view.*
 import kotlinx.android.synthetic.main.sub_top_item.view.*
@@ -37,6 +40,7 @@ class MainFragment02() : Fragment() {
     private lateinit var mockDataString02: Array<String>
     private lateinit var mockDataString03: Array<String>
     private lateinit var heightTv : TextView
+    private lateinit var ageTv : TextView
     var height = 0F
     private lateinit var mContext : Context
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +49,7 @@ class MainFragment02() : Fragment() {
             clearItem()
             addItem(it.inBodyData,it.fatData,it.muscleFatControll,it.hrBp)
             heightTv.text = it.height.toString()+"cm"
+            ageTv.text = ViewModelCase.model.getBody()?.age?.toInt().toString()+"세"
         })
     }
 
@@ -79,6 +84,8 @@ class MainFragment02() : Fragment() {
         view.sub_value_tv.text = height.toString()+"cm"
         subView = view.findViewById(R.id.sub_view)
         heightTv = view.findViewById(R.id.sub_value_tv)
+        ageTv = view.findViewById(R.id.age_tv)
+        view.age_tv.text = ViewModelCase.model.getBody()?.age?.toInt().toString()+"세"
         view.more_btn.setOnClickListener {
             startActivity(Intent(mContext,HealthDataRegActivity::class.java))
         }
