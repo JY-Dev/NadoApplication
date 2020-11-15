@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/test_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/info01"
+                app:layout_collapseMode="parallax"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                app:ci_drawable="@drawable/indicator_white"
+                app:ci_drawable_unselected="@drawable/indicator_unsel"
+                android:layout_height="48dp"/>
+
+            <ImageView
+                android:id="@+id/back_btn02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:alpha="0.9"
+                android:layout_marginStart="20dp"
+                app:layout_collapseMode="pin"
+                android:src="@drawable/back_btn_white"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="vertical"
+                android:background="#fff"
+                android:alpha="0"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/back_btn"/>
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_color"
+                    android:text="사당점"/>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <RadioGroup
+            android:id="@+id/rd_fitness_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp">
+
+            <RadioButton
+                android:id="@+id/center_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:textColor="@drawable/navigation_report_color"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:checked="true"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="센터정보"/>
+
+            <RadioButton
+                android:id="@+id/pt_tutor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/navigation_report_color"
+                android:button="@null"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:text="PT강사"/>
+
+            <RadioButton
+                android:id="@+id/coupon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/navigation_report_color"
+                android:button="@null"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="쿠폰"/>
+
+            <RadioButton
+                android:id="@+id/noti"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/navigation_report_color"
+                android:button="@null"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="공지"/>
+
+
+
+        </RadioGroup>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -2,16 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jydev.nadoapplication">
 
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/login_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.NadoApplication">
-        <activity android:name=".activity.HealthDataRegActivity"
+
+        <activity
+            android:name=".activity.FitnessInfoActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HealthDataRegActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.NadoApplication.Main"/>
+            android:theme="@style/Theme.NadoApplication.Main" />
         <activity
             android:name=".activity.FitnessSelActivity"
             android:screenOrientation="portrait"
@@ -27,16 +37,12 @@
         <activity
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.NadoApplication.Splash"></activity>
+            android:theme="@style/Theme.NadoApplication.Splash" />
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NadoApplication.Main">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
