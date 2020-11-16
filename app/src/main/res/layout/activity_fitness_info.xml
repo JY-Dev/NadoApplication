@@ -20,13 +20,7 @@
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <ImageView
-                android:id="@+id/backdrop"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/info01"
-                app:layout_collapseMode="parallax"/>
+
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/pager"
                 android:layout_width="match_parent"
@@ -55,27 +49,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:orientation="vertical"
+                android:layout_marginStart="-20dp"
                 android:background="#fff"
                 android:alpha="0"
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/back_btn"/>
 
-                <ImageView
-                    android:id="@+id/back_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/back_btn"/>
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/text_color"
+                        android:text="GYM 피트니스 사당점"/>
+                </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/toolbar_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/text_color"
-                    android:text="사당점"/>
+
 
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -85,72 +85,87 @@
         android:id="@+id/ns_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="#f4f6fa"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
 
-        <RadioGroup
-            android:id="@+id/rd_fitness_info"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingStart="40dp"
-            android:paddingEnd="40dp">
-
-            <RadioButton
-                android:id="@+id/center_info"
-                android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/rd_fitness_info"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:textColor="@drawable/navigation_report_color"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:checked="true"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:text="센터정보"/>
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp">
 
-            <RadioButton
-                android:id="@+id/pt_tutor"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@drawable/navigation_report_color"
-                android:button="@null"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:layout_weight="1"
-                android:text="PT강사"/>
+                <RadioButton
+                    android:id="@+id/center_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:textColor="@drawable/navigation_report_color"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="센터정보"/>
 
-            <RadioButton
-                android:id="@+id/coupon"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@drawable/navigation_report_color"
-                android:button="@null"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:text="쿠폰"/>
+                <RadioButton
+                    android:id="@+id/pt_tutor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/navigation_report_color"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:text="PT강사"/>
 
-            <RadioButton
-                android:id="@+id/noti"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@drawable/navigation_report_color"
-                android:button="@null"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:text="공지"/>
+                <RadioButton
+                    android:id="@+id/coupon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/navigation_report_color"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="쿠폰"/>
+
+                <RadioButton
+                    android:id="@+id/noti"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/navigation_report_color"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="공지"/>
 
 
 
-        </RadioGroup>
+            </RadioGroup>
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
 
 
     </androidx.core.widget.NestedScrollView>
