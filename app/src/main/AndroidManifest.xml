@@ -11,12 +11,9 @@
 
         <activity
             android:name=".activity.FitnessInfoActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NadoApplication.Main" >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activity.HealthDataRegActivity"
@@ -42,6 +39,12 @@
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NadoApplication.Main">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
     </application>

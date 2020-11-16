@@ -1,5 +1,6 @@
 package com.jydev.nadoapplication.fragment.main
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.jydev.nadoapplication.R
+import com.jydev.nadoapplication.activity.FitnessInfoActivity
 import com.jydev.nadoapplication.activity.FitnessSelActivity
 import com.jydev.nadoapplication.adapter.GridAdapter
-import com.jydev.nadoapplication.util.FirstCheck
 import kotlinx.android.synthetic.main.fragment_start.view.*
 import kotlinx.android.synthetic.main.start_main_sub_item.view.*
 
@@ -18,6 +19,7 @@ import kotlinx.android.synthetic.main.start_main_sub_item.view.*
 class StartFragment : Fragment() {
     private lateinit var subView : LinearLayout
     private val mockData = mutableListOf("내 주변", "신규 피트니스 센터")
+    private lateinit var mContext : Context
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -41,11 +43,18 @@ class StartFragment : Fragment() {
     private fun addSubItem(position:Int){
         val view = LayoutInflater.from(context).inflate(R.layout.start_main_sub_item,null)
         view.sub_title_tv.text = mockData[position]
-        if(position==0) view.sub_sub_title_tv.visibility = View.GONE
-        val adapter = GridAdapter(context!!)
+        if(position==0) view.sub_sub_title_tv.visibility = View.VISIBLE
+        val adapter = GridAdapter(mContext)
         view.grid_view.adapter = adapter
+        view.grid_view.setOnItemClickListener { adapterView, view, i, l ->
+            startActivity(Intent(mContext,FitnessInfoActivity::class.java))
+        }
         view.grid_view.setExpanded(true)
         subView.addView(view)
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mContext = context
+    }
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.fitness.PttutorFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="22dp"
+        android:paddingBottom="14dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제공 쿠폰"
+                android:layout_marginEnd="10dp"
+                android:textColor="#006ea1"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/coupon_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12개"
+                android:textColor="#006ea1"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>
