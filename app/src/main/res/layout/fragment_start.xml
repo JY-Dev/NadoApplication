@@ -33,6 +33,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/font"
                     android:layout_weight="1"
                     android:textColor="#006ea1"
                     android:text="이용하고 계신 센터를 선택하시면 건강관리를 위한 헬스케어링이 시작됩니다."/>
@@ -49,6 +50,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
+                        android:fontFamily="@font/font"
                         android:textColor="#ffffff"
                         android:text="센터 선택"/>
 

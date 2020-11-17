@@ -15,6 +15,7 @@
             android:id="@+id/sub_title_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
             android:textSize="16sp"
             android:text="체지방"
             android:textColor="@color/text_color"/>
@@ -23,6 +24,7 @@
             android:id="@+id/sub_value_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
             android:textSize="14sp"
             android:layout_alignParentEnd="true"
             android:text="27"
@@ -32,6 +34,7 @@
             android:id="@+id/sub_value_title_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
             android:layout_below="@id/sub_value_tv"
             android:layout_alignParentEnd="true"
             android:textColor="#9c9eb9"

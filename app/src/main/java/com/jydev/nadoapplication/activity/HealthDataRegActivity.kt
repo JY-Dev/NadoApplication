@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.setPadding
 import com.google.android.material.textview.MaterialTextView
@@ -131,6 +132,7 @@ class HealthDataRegActivity() : AppCompatActivity() {
         return TextView(this).apply {
             layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
             setPadding(10.dp)
+            typeface = ResourcesCompat.getFont(this@HealthDataRegActivity,R.font.font)
             setTextColor(resources.getColor(R.color.text_color, null))
             setBackgroundColor(Color.parseColor("#f4f6fa"))
             setTextSize(TypedValue.COMPLEX_UNIT_DIP,14f)

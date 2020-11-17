@@ -21,6 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
             android:layout_marginBottom="4dp"
             android:text="홍길동"
             android:textColor="@color/text_color"
@@ -31,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/font"
             android:text="28세"
             android:textColor="@color/text_color"
             android:textSize="14sp" />
@@ -40,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
+            android:fontFamily="@font/font"
             android:text="GYM피트니스센터 사당역점"
             android:textColor="#9c9eb9"
             android:textSize="12sp" />
@@ -67,6 +70,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/font"
                         android:layout_centerVertical="true"
                         android:textSize="16sp"
                         android:textColor="@color/text_color"
@@ -102,6 +106,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/font"
                         android:layout_centerVertical="true"
                         android:textSize="16sp"
                         android:textColor="@color/text_color"
@@ -142,6 +147,7 @@
                         android:layout_centerVertical="true"
                         android:textSize="16sp"
                         android:textColor="@color/text_color"
+                        android:fontFamily="@font/font"
                         android:text="건강 데이터 등록"/>
 
                     <ImageView
@@ -175,10 +181,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:textSize="16sp"
+                        android:fontFamily="@font/font"
+                        android:text="문의 내역"
                         android:textColor="@color/text_color"
-                        android:text="문의 내역"/>
+                        android:textSize="16sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -211,6 +217,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
+                        android:fontFamily="@font/font"
                         android:textSize="16sp"
                         android:textColor="@color/text_color"
                         android:text="친구 초대"/>
@@ -249,6 +256,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:textSize="16sp"
+                        android:fontFamily="@font/font"
                         android:textColor="@color/text_color"
                         android:text="공지사항"/>
 
@@ -282,6 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
+                        android:fontFamily="@font/font"
                         android:textSize="16sp"
                         android:textColor="@color/text_color"
                         android:text="쿠폰함"/>
@@ -318,6 +327,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:textSize="16sp"
+                        android:fontFamily="@font/font"
                         android:textColor="@color/text_color"
                         android:text="설정"/>
 

@@ -22,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="24dp"
+        android:fontFamily="@font/font"
         android:layout_gravity="start"
         android:textSize="26sp"
         android:textStyle="bold"

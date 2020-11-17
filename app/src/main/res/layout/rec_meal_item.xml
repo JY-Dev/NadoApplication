@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/text_color"
+        android:fontFamily="@font/font"
         android:textSize="16sp"/>
 
     <View
@@ -35,6 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="아침 : "
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
                 android:textSize="14sp"/>
 
@@ -43,6 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
                 android:textSize="14sp"/>
 
@@ -57,6 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="점심 : "
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
                 android:textSize="14sp"/>
 
@@ -65,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
                 android:textSize="14sp"/>
 
@@ -79,6 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="저녁 : "
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
                 android:textSize="14sp"/>
 
@@ -87,6 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
                 android:textSize="14sp"/>
 

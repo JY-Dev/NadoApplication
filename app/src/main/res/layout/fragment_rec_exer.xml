@@ -24,6 +24,7 @@
                 android:textColor="@color/text_color"
                 android:layout_marginBottom="26dp"
                 android:textSize="28sp"
+                android:fontFamily="@font/font"
                 android:text="추천운동" />
 
             <TextView
@@ -31,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/text_color"
                 android:textSize="16sp"
+                android:fontFamily="@font/font"
                 android:text="평일운동"/>
 
             <View
@@ -45,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"/>
 
             <TextView
@@ -52,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#EB5050"
                 android:textSize="16sp"
+                android:fontFamily="@font/font"
                 android:text="주말"/>
 
             <View
@@ -66,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"/>
 
 

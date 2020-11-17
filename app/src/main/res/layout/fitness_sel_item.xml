@@ -19,6 +19,7 @@
         android:id="@+id/title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/font"
         android:textSize="14sp"
         android:textColor="#9c9eb9"/>
 

@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:text="완료"
+            android:fontFamily="@font/font"
             android:textSize="18sp" />
     </LinearLayout>
 

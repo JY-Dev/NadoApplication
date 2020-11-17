@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import com.jydev.nadoapplication.R
+import com.jydev.nadoapplication.util.CustomPasswordTransformationMethod
 import com.jydev.nadoapplication.util.OnClickUtil
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -13,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         OnClickUtil.setOnClick(alliance,this)
+        pw_et.transformationMethod = CustomPasswordTransformationMethod()
         login_btn.setOnClickListener {
             if(id_et.text.isNotEmpty()&&pw_et.text.isNotEmpty())
                 startActivity(Intent(this,GuideActivity::class.java))

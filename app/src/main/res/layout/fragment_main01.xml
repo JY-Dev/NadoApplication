@@ -18,6 +18,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
+                android:fontFamily="@font/font"
                 android:text="김준식"
                 android:textColor="@color/text_color"
                 android:textSize="20sp" />
@@ -26,6 +27,7 @@
                 android:id="@+id/age_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
                 android:layout_marginBottom="8dp"
                 android:text="28세"
                 android:textColor="@color/text_color"
@@ -36,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:text="GYM피트니스센터 사당역점"
+                android:fontFamily="@font/font"
                 android:textColor="#9c9eb9"
                 android:textSize="12sp" />
 
@@ -52,6 +55,7 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textAlignment="center"
+            android:fontFamily="@font/font"
             android:layout_marginBottom="30dp"
             android:text="PT강사님께서 회원님의 건강데이터를\n등록하지 않았습니다."
             android:textColor="#eb5050"/>
@@ -62,6 +66,7 @@
             android:textAlignment="center"
             android:text="피트니스센터에서 인바디 검사를 진행하신 경우\nPT강사님께 데이터 등록을 요청해 주세요 "
             android:textSize="16sp"
+            android:fontFamily="@font/font"
             android:textColor="@color/disable_text_color"/>
 
         <LinearLayout
@@ -83,6 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
+                    android:fontFamily="@font/font"
                     android:textColor="#ffffff"
                     android:text="문의하기"/>
 
@@ -100,6 +106,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textColor="#ffffff"
+                    android:fontFamily="@font/font"
                     android:text="이전 홈으로"/>
 
             </LinearLayout>

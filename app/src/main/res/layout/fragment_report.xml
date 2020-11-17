@@ -23,6 +23,7 @@
             android:textSize="20sp"
             android:layout_marginBottom="12dp"
             android:text="강민국"
+            android:fontFamily="@font/font"
             android:textColor="@color/text_color"/>
 
         <TextView
@@ -31,6 +32,7 @@
             android:textSize="12sp"
             android:textColor="#9c9eb9"
             android:layout_marginBottom="24dp"
+            android:fontFamily="@font/font"
             android:text="PT님께서 고객님을 위해 등록하였습니다"/>
 
         <RelativeLayout
@@ -53,6 +55,7 @@
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:gravity="center"
+                    android:fontFamily="@font/font"
                     android:textColor="@drawable/navigation_report_color"
                     android:textAlignment="center"
                     android:textSize="16sp"
@@ -66,6 +69,7 @@
                     android:textColor="@drawable/navigation_report_color"
                     android:button="@null"
                     android:gravity="center"
+                    android:fontFamily="@font/font"
                     android:textAlignment="center"
                     android:textSize="16sp"
                     android:layout_weight="1"
@@ -79,6 +83,7 @@
                     android:button="@null"
                     android:gravity="center"
                     android:textAlignment="center"
+                    android:fontFamily="@font/font"
                     android:textSize="16sp"
                     android:layout_weight="1"
                     android:text="PT과제"/>

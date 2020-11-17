@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:layout_alignParentTop="true"
+        android:fontFamily="@font/font"
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
         android:textSize="20sp"

@@ -26,6 +26,7 @@
                 android:textSize="28sp"
                 android:textColor="@color/text_color"
                 android:text="GYM 피트니스 사당점"
+                android:fontFamily="@font/font"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -33,6 +34,7 @@
                 android:id="@+id/add_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
                 android:textSize="14sp"
                 android:text="서울특별시 동작구 사당동 231-8번지 2층"
                 android:textColor="@color/disable_text_color"/>
@@ -41,6 +43,7 @@
                 android:id="@+id/sub_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/font"
                 android:layout_marginTop="16dp"
                 android:textSize="14sp"
                 android:text="2019년부터 6월 오픈하여 최신시설을 보유하고 있으며, 다양한 PT강사님들께서 회원분들의 건강을 책임지고 있습니다.
@@ -66,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="영업시간"
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
                 android:textSize="16sp"/>
             <TextView
@@ -73,6 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:fontFamily="@font/font"
                 android:textColor="#006ea1"
                 android:textSize="14sp"
                 android:text="02-4677-8896"/>
@@ -92,6 +97,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:lineSpacingExtra="4sp"
+            android:fontFamily="@font/font"
             android:textColor="@color/text_color"
             android:layout_marginBottom="26dp"
             android:text="평   일 : 09:00 ~ 22:00\n토요일 : 09:00 ~ 21:00\n일요일 : 11:00 ~ 18:00\n* 매월 첫째 주 화요일 휴무"/>
@@ -100,6 +106,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
             android:textColor="@color/text_color"
             android:textSize="16sp"
             android:text="프로그램"/>
@@ -117,6 +124,7 @@
             android:lineSpacingExtra="4sp"
             android:layout_marginBottom="26dp"
             android:textColor="@color/text_color"
+            android:fontFamily="@font/font"
             android:textSize="14sp"
             android:text="무료 : 댄스스포츠, 권투\n유료 : 필라테스, 요가"/>
 
@@ -125,6 +133,7 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textColor="@color/text_color"
+            android:fontFamily="@font/font"
             android:text="편의정보"/>
 
         <View
@@ -156,8 +165,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:text="무료주차"
+                    android:fontFamily="@font/font"
                     android:textColor="@color/disable_text_color"/>
 
             </LinearLayout>
@@ -178,8 +188,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:text="유료주차"
+                    android:fontFamily="@font/font"
                     android:textColor="@color/disable_text_color"/>
 
             </LinearLayout>
@@ -200,7 +211,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/font"
                     android:text="샤워실"
                     android:textColor="@color/disable_text_color"/>
 
@@ -222,7 +234,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:fontFamily="@font/font"
+                    android:textSize="11sp"
                     android:text="타올"
                     android:textColor="@color/disable_text_color"/>
 
@@ -244,7 +257,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/font"
                     android:text="운동복"
                     android:textColor="@color/disable_text_color"/>
 
@@ -266,8 +280,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:text="일일락커"
+                    android:fontFamily="@font/font"
                     android:textColor="@color/disable_text_color"/>
 
             </LinearLayout>
@@ -288,7 +303,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/font"
                     android:text="와이파이"
                     android:textColor="@color/disable_text_color"/>
 

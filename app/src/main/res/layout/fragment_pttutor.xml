@@ -25,6 +25,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="PT강사"
+               android:fontFamily="@font/font"
                android:layout_marginEnd="10dp"
                android:textColor="#006ea1"
                android:textSize="16sp"/>
@@ -34,6 +35,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="12명"
+               android:fontFamily="@font/font"
                android:textColor="#006ea1"
                android:textSize="16sp"/>
 

@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:background="#f4f6fa"
         android:padding="10dp"
+        android:fontFamily="@font/font"
         android:text="근육/지방 조절 데이터"
         android:textColor="@color/text_color"
         android:textSize="14sp" />
@@ -33,6 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:fontFamily="@font/font"
                 android:layout_marginEnd="54dp"
                 android:text="지방"
                 android:textColor="@color/text_color"
@@ -101,6 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/font"
                         android:text="kg"
                         android:textColor="@color/text_color"
                         android:textSize="16sp" />
@@ -132,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="54dp"
+                android:fontFamily="@font/font"
                 android:text="근육"
                 android:textColor="@color/text_color"
                 android:textSize="16sp" />
@@ -200,6 +204,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="kg"
+                        android:fontFamily="@font/font"
                         android:textColor="@color/text_color"
                         android:textSize="16sp" />
 
@@ -233,6 +238,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="54dp"
                 android:text="체중"
+                android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
                 android:textSize="16sp" />
 
@@ -301,6 +307,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="kg"
+                        android:fontFamily="@font/font"
                         android:textColor="@color/text_color"
                         android:textSize="16sp" />
 
