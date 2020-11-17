@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.jydev.nadoapplication.R
 import com.jydev.nadoapplication.adapter.NotiAdapter
 import kotlinx.android.synthetic.main.fragment_noti.view.*
@@ -26,8 +27,10 @@ class NotiFragment : Fragment() {
         // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_noti, container, false)
         val adapter = NotiAdapter(mContext)
-        view.list_view.isEnabled = false
         view.list_view.adapter = adapter
+        view.list_view.setOnItemClickListener { adapterView, view, i, l ->
+            Toast.makeText(mContext,"서비스 준비중입니다.", Toast.LENGTH_SHORT).show()
+        }
         return view
     }
 

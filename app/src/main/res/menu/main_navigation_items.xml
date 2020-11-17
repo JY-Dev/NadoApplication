@@ -8,11 +8,9 @@
         android:icon="@drawable/report"/>
     <item android:id="@+id/search"
         android:title=""
-        android:enabled="false"
         android:icon="@drawable/search"/>
     <item android:id="@+id/chat"
         android:title=""
-        android:enabled="false"
         android:icon="@drawable/chat"/>
     <item android:id="@+id/mypage"
         android:title=""

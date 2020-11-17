@@ -8,6 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.core.view.ViewCompat
+import androidx.lifecycle.GeneratedAdapter
 import com.jydev.nadoapplication.R
 import com.jydev.nadoapplication.activity.FitnessInfoActivity
 import com.jydev.nadoapplication.activity.FitnessSelActivity
@@ -43,6 +46,12 @@ class StartFragment : Fragment() {
     private fun addSubItem(position:Int){
         val view = LayoutInflater.from(context).inflate(R.layout.start_main_sub_item,null)
         view.sub_title_tv.text = mockData[position]
+        view.arrow_btn.apply {
+            id = ViewCompat.generateViewId()
+            setOnClickListener {
+                Toast.makeText(mContext,"서비스 준비중입니다.",Toast.LENGTH_SHORT).show()
+            }
+        }
         if(position==0) view.sub_sub_title_tv.visibility = View.VISIBLE
         val adapter = GridAdapter(mContext)
         view.grid_view.adapter = adapter

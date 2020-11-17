@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.jydev.nadoapplication.R
 import com.jydev.nadoapplication.adapter.PtTutorAdapter
 import kotlinx.android.synthetic.main.fragment_pttutor.view.*
@@ -30,7 +31,9 @@ class PttutorFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_pttutor, container, false)
         val adapter = PtTutorAdapter(mContext)
         view.list_view.adapter = adapter
-        view.list_view.isEnabled = false
+        view.list_view.setOnItemClickListener { adapterView, view, i, l ->
+            Toast.makeText(mContext,"서비스 준비중입니다.",Toast.LENGTH_SHORT).show()
+        }
         view.person_num_tv.text = adapter.count.toString()+"명"
         return view
     }

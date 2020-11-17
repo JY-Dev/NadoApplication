@@ -47,16 +47,23 @@ class MainFragment02() : Fragment() {
         super.onCreate(savedInstanceState)
         ViewModelCase.model.body.observe(this, androidx.lifecycle.Observer {
             clearItem()
+
             addItem(it.inBodyData,it.fatData,it.muscleFatControll,it.hrBp)
             heightTv.text = it.height.toString()+"cm"
             ageTv.text = ViewModelCase.model.getBody()?.age?.toInt().toString()+"세"
         })
     }
 
+    init {
+        retainInstance = true
+    }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mContext = context
     }
+
+
 
     private fun arrayInit() {
         titleArray = getStringArray(R.array.mainSubItemList)

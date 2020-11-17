@@ -2,22 +2,23 @@ package com.jydev.nadoapplication.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.jydev.nadoapplication.R
 import com.jydev.nadoapplication.callback.ClearFragmentCallback
 import com.jydev.nadoapplication.data.*
-import com.jydev.nadoapplication.fragment.main.MyPageFragment
-import com.jydev.nadoapplication.fragment.main.MainFragment01
-import com.jydev.nadoapplication.fragment.main.MainFragment02
-import com.jydev.nadoapplication.fragment.main.ReportFragment
-import com.jydev.nadoapplication.fragment.main.StartFragment
+import com.jydev.nadoapplication.fragment.ChatFragment
+import com.jydev.nadoapplication.fragment.main.*
 import com.jydev.nadoapplication.util.FirstCheck.firstCheck
 import com.jydev.nadoapplication.util.MenuItem
 import com.jydev.nadoapplication.util.ViewModelCase
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
     private val mockMuscleFatControllData = MuscleFatControll(-3.7F, 8.1F, -4.4F)
     private val mockHrBp = HrBp(62F, 112F, 79F)
     private val model: BodyDataViewModel by viewModels()
+    private var backPressTime = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +61,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun layoutInit() {
-        main_btn.visibility = View.VISIBLE
         firstFragment =
             if (firstCheck) StartFragment() else MainFragment01(object : ClearFragmentCallback {
                 override fun clearFragment() {
@@ -72,27 +73,36 @@ class MainActivity : AppCompatActivity() {
             firstFragment,
             MainFragment02(),
             ReportFragment(),
-            MyPageFragment()
+            MyPageFragment(),
+            ChatFragment(),
+            SearchFragment()
         )
         setFragment(MenuItem.MAIN01.ordinal)
         preMenuId = R.id.home
         bottom_navigation.setOnNavigationItemSelectedListener { item ->
+
             when (item.itemId) {
                 R.id.home -> {
                     if (preMenuId == item.itemId) setAnimation()
                     toolbar_title.text = "헬스케어링"
-                    main_btn.visibility = View.VISIBLE
                     if (!firstCheck) setFragment(if (mainFlag) MenuItem.MAIN01.ordinal else MenuItem.MAIN02.ordinal)
                     else setFragment(MenuItem.MAIN01.ordinal)
                 }
+                R.id.search ->{
+                    toolbar_title.text = "검색"
+                    setFragment(MenuItem.SEARCH.ordinal)
+                }
+                R.id.chat -> {
+                    toolbar_title.text = "채팅"
+                    setFragment(MenuItem.CHAT.ordinal)
+                }
                 R.id.report -> {
                     toolbar_title.text = "건강관리"
-                    main_btn.visibility = View.GONE
                     setFragment(MenuItem.REPORT.ordinal)
                 }
                 R.id.mypage -> {
                     toolbar_title.text = "마이페이지"
-                    main_btn.visibility = View.GONE
+
                     setFragment(MenuItem.MYPAGE.ordinal)
                 }
             }
@@ -120,8 +130,17 @@ class MainActivity : AppCompatActivity() {
             firstCheck = false
             layoutInit()
         }
+    }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if(backPressTime==0L||backPressTime+1000L<System.currentTimeMillis()){
+            backPressTime = System.currentTimeMillis()
+            Toast.makeText(this,"한번더 누르시면 종료됩니다.",Toast.LENGTH_SHORT).show()
+        }
+        else finish()
 
     }
+
 
 }
