@@ -10,8 +10,9 @@
     tools:context=".activity.GuideActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:textSize="32sp"
         android:textColor="#2D3142"
         android:fontFamily="@font/font"
