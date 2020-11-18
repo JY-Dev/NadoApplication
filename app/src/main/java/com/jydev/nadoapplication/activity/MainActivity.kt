@@ -133,13 +133,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
         if(backPressTime==0L||backPressTime+1000L<System.currentTimeMillis()){
             backPressTime = System.currentTimeMillis()
             Toast.makeText(this,"한번더 누르시면 종료됩니다.",Toast.LENGTH_SHORT).show()
         }
         else finish()
-
     }
 
 
