@@ -34,11 +34,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:fontFamily="@font/font"
                 android:layout_marginEnd="54dp"
+                android:fontFamily="@font/font"
                 android:text="지방"
                 android:textColor="@color/text_color"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="240dp"
@@ -97,7 +97,7 @@
                         android:inputType="number"
                         android:background="@null"
                         android:textColor="@color/text_color"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
                         android:fontFamily="@font/font"
                         android:text="kg"
                         android:textColor="@color/text_color"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -138,7 +138,7 @@
                 android:fontFamily="@font/font"
                 android:text="근육"
                 android:textColor="@color/text_color"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="240dp"
@@ -197,7 +197,7 @@
                         android:inputType="number"
                         android:background="@null"
                         android:textColor="@color/text_color"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -206,7 +206,7 @@
                         android:text="kg"
                         android:fontFamily="@font/font"
                         android:textColor="@color/text_color"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -240,7 +240,7 @@
                 android:text="체중"
                 android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="240dp"
@@ -300,7 +300,7 @@
                         android:background="@null"
                         android:inputType="number"
                         android:textColor="@color/text_color"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -309,7 +309,7 @@
                         android:text="kg"
                         android:fontFamily="@font/font"
                         android:textColor="@color/text_color"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 

@@ -15,7 +15,7 @@
         android:layout_marginEnd="54dp"
         android:text="신장"
         android:textColor="@color/text_color"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <LinearLayout
         android:layout_width="240dp"
@@ -37,7 +37,7 @@
                 android:background="@null"
                 android:fontFamily="@font/font"
                 android:textColor="@color/text_color"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/unit_tv"
@@ -47,7 +47,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="cm"
                 android:textColor="@color/text_color"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
